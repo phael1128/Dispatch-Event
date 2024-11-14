@@ -11,7 +11,9 @@ class CustomLayout(
 ): LinearLayout(context)  {
 
     /**
-     *
+     * Event 발생시 가장 먼저 호출되는 메소드
+     * 함수명 그대로 TouchEvent를 하위 계층View로 전파할 것인지 아닌지에 결정
+     * true를 리턴하게 되면 해당 class에서 이벤트를 소비한 것으로 간주하고 이벤트를 전파하지 않음
      */
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
         Log.d("phael", "CustomViewGroup in called dispatchTouchEvent()")
